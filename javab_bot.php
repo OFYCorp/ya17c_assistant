@@ -20,7 +20,21 @@ if ( sizeof($request_array['events']) > 0 )
             if( $event['message']['type'] == 'text' )
             {
                 $text = $event['message']['text'];
-                $reply_message = 'ระบบได้รับข้อความ ('.$text.') ของคุณแล้ว';
+//                $reply_message = 'ระบบได้รับข้อความ ('.$text.') ของคุณแล้ว';
+
+                if($text == 'รถมีทั้งหมดกี่รุ่น')
+                {
+                    $reply_message = 'คุณต้องการถามถึงรถรุ่น Yaris หรือ Yaris ATIV?';
+
+                }else if($text == 'Yaris')
+                {
+                    $reply_message = 'มีทั้งหมด 4 รุ่น ดังนี้ xxxx';
+
+                }else if($text == 'Yaris ATIV')
+                {
+                    $reply_message = 'มีทั้งหมด 5 รุ่น ดังนี้ xxxxxx';
+                }
+
             }
             else
                 $reply_message = 'ระบบได้รับ '.ucfirst($event['message']['type']).' ของคุณแล้ว';
