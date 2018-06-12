@@ -28,16 +28,23 @@ if ( sizeof($request_array['events']) > 0 )
 
                 }else if($text == 'Yaris')
                 {
-                    $reply_message = 'มีทั้งหมด 4 รุ่น ดังนี้ xxxx';
+                    $reply_message = 'มีทั้งหมด 4 รุ่น ดังนี้';
 
                 }else if($text == 'Yaris ATIV')
                 {
                     $reply_message = 'มีทั้งหมด 5 รุ่น ดังนี้ xxxxxx';
                 }
 
+//                if (strpos($text, 'เปิด') !== false)
+//                { 
+//                    $reply_message = 'turn-on'; 
+//                }
+
+
+
             }
-            else
-                $reply_message = 'ระบบได้รับ '.ucfirst($event['message']['type']).' ของคุณแล้ว';
+//            else
+//                $reply_message = 'ระบบได้รับ '.ucfirst($event['message']['type']).' ของคุณแล้ว';
 
         }
         else
