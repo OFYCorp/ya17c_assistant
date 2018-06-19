@@ -33,6 +33,9 @@ if ( sizeof($request_array['events']) > 0 )
                 }else if($text == 'Yaris ATIV')
                 {
                     $reply_message = 'มีทั้งหมด 5 รุ่น ดังนี้ xxxxxx';
+                }else
+                {
+                    $reply_message = 'User ID: ' . $event['source']['userId'] . ' type: ' . $event['source']['type'];
                 }
 
 //                if (strpos($text, 'เปิด') !== false)
