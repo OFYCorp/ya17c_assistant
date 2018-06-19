@@ -53,7 +53,7 @@ $httpClient = new CurlHTTPClient(LINE_MESSAGE_ACCESS_TOKEN);
 $bot = new LINEBot($httpClient, array('channelSecret' => LINE_MESSAGE_CHANNEL_SECRET));
 
 // userId
-$userId = ' userId ของผู้ใช้ที่เราต้องการส่งข้อความ push ไปแสดง ';
+$userId = 'U8e65516071e4b5d29c578c4f285ac66c';
 // ทดสอบส่ง push ข้อความอย่างง่าย
 $textPushMessage = 'สวัสดีครับ';
 $messageData = new TextMessageBuilder($textPushMessage);
