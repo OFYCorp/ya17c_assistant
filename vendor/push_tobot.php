@@ -53,9 +53,10 @@ $httpClient = new CurlHTTPClient(LINE_MESSAGE_ACCESS_TOKEN);
 $bot = new LINEBot($httpClient, array('channelSecret' => LINE_MESSAGE_CHANNEL_SECRET));
 
 // userId
-$userId = 'U8e65516071e4b5d29c578c4f285ac66c';
+$userId = 'U917bf0209fa7779df5291f778ae91b3f';
+//OM $userId = 'U8e65516071e4b5d29c578c4f285ac66c';
 // ทดสอบส่ง push ข้อความอย่างง่าย
-$textPushMessage = 'สวัสดีครับ';
+$textPushMessage = 'ไม่ต้องด่ากลับนะครับ ผมคือบอท คุณโอมเขาไม่เห็นข้อความของคุณหรอก';
 $messageData = new TextMessageBuilder($textPushMessage);
 
 $response = $bot->pushMessage($userId,$messageData);
