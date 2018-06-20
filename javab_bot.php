@@ -28,7 +28,7 @@ if ( sizeof($request_array['events']) > 0 )
 
                 }else if($text == 'Yaris')
                 {
-                    $reply_message = 'มีทั้งหมด 4 รุ่น ดังนี้';
+                    $reply_message = 'มีทั้งหมด 4 รุ่น ดังนี้ 1';
 
                 }else if($text == 'Yaris ATIV')
                 {
