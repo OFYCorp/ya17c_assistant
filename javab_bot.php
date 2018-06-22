@@ -1,9 +1,13 @@
 <?php
-
-//$API_URL = 'https://api.line.me/v2/bot/message/reply';
-$API_URL = 'https://api.line.me/v2/bot/profile/U2ffa24c8b5677e049ca8996fef8784e8';
 $ACCESS_TOKEN = 's6B8WTWNkSI3IhbUSYVoNsHsazHZsh68GURPWHlBwAwcEr9w7Av21XJ43q8B3JGccXFxUfmK+IsDwiYm+tumI+ZLw5rFK8+bJBG9+4h0BylzHoIpV3eHttznIttxn9XrCYxk5tJhnpBcYqY6Gt68dgdB04t89/1O/w1cDnyilFU='; // Access Token ค่าที่เราสร้างขึ้น
 $POST_HEADER = array('Content-Type: application/json', 'Authorization: Bearer ' . $ACCESS_TOKEN);
+
+$API_PROFILE_URL = 'https://api.line.me/v2/bot/profile/U2ffa24c8b5677e049ca8996fef8784e8';
+$API_URL = 'https://api.line.me/v2/bot/message/reply';
+
+$request = file_get_contents('php://input');   // Get request content
+$request_profile_array = json_decode($request, true);   // Decode JSON to Array
+$request_data = request_profile($API_PROFILE_URL, $POST_HEADER);
 
 $request = file_get_contents('php://input');   // Get request content
 $request_array = json_decode($request, true);   // Decode JSON to Array
@@ -47,7 +51,7 @@ if (sizeof($request_array['events']) > 0) {
         } else
 //            $reply_message = 'ระบบได้รับ Event '.ucfirst($event['type']).' ของคุณแล้ว';
             $reply_message = json_encode($event);
-
+$reply_message = $request_data;
         if (strlen($reply_message) > 0) {
             //$reply_message = iconv("tis-620","utf-8",$reply_message);
             $data = [
@@ -71,6 +75,19 @@ function send_reply_message($url, $post_header, $post_body)
     curl_setopt($ch, CURLOPT_RETURNTRANSFER, true);
     curl_setopt($ch, CURLOPT_HTTPHEADER, $post_header);
     curl_setopt($ch, CURLOPT_POSTFIELDS, $post_body);
+    curl_setopt($ch, CURLOPT_FOLLOWLOCATION, 1);
+    $result = curl_exec($ch);
+    curl_close($ch);
+
+    return $result;
+}
+
+function request_profile($url, $post_header)
+{
+    $ch = curl_init($url);
+    curl_setopt($ch, CURLOPT_CUSTOMREQUEST, "GET");
+    curl_setopt($ch, CURLOPT_RETURNTRANSFER, true);
+    curl_setopt($ch, CURLOPT_HTTPHEADER, $post_header);
     curl_setopt($ch, CURLOPT_FOLLOWLOCATION, 1);
     $result = curl_exec($ch);
     curl_close($ch);
