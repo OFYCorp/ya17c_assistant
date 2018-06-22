@@ -37,7 +37,7 @@ if (sizeof($request_array['events']) > 0) {
                     $reply_message = 'มีทั้งหมด 5 รุ่น ดังนี้ xxxxxx';
 
                 } else {
-                    $reply_message = 'ขออภัยครับ ไม่พบเนื้อหาที่คุณต้องการ';
+//                    $reply_message = 'ขออภัยครับ ไม่พบเนื้อหาที่คุณต้องการ';
 //                    $reply_message = 'User ID: ' . $event['source']['userId'] . ' type: ' . $event['source']['type'];
 //                    $reply_message = json_encode($event) . ' ';
                 }
