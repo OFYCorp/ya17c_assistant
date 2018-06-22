@@ -57,7 +57,7 @@ if (sizeof($request_array['events']) > 0) {
             $reply_message = json_encode($event);
         }
 
-        $reply_message = $request_profile_data;
+       // $reply_message = $request_profile_data;
 
         if (strlen($reply_message) > 0) {
             //$reply_message = iconv("tis-620","utf-8",$reply_message);
