@@ -66,13 +66,22 @@ if (sizeof($request_array['events']) > 0) {
 //                    'originalContentUrl' => 'https://i2.wp.com/beebom.com/wp-content/uploads/2016/01/Reverse-Image-Search-Engines-Apps-And-Its-Uses-2016.jpg?resize=640%2C426', 'previewImageUrl' => 'https://i2.wp.com/beebom.com/wp-content/uploads/2016/01/Reverse-Image-Search-Engines-Apps-And-Its-Uses-2016.jpg?resize=640%2C426',
 //                    'animated' => false]]
 
-                // Sticker
-                'messages' => [[
-                    'type' => 'sticker',
-                    'packageId' => '4',
-                    'stickerId' => '623']]
+//                 Sticker
+//                'messages' => [[
+//                    'type' => 'sticker',
+//                    'packageId' => '4',
+//                    'stickerId' => '623']]
 
-            // Template
+//                 Location
+                'messages' => [[
+                    'type' => 'location',
+                    'title' => 'ศูนย์บริการโตโยต้าบัสส์',
+                    'address' => '69/40 ถนนบางยี่ขัน แขวง/เขตบางกอกใหญ่ กรุงเทพ',
+                    'latitude' => '13.840058',
+                    'longitude' => '100.580857',
+                ]]
+
+                // Template
 //                'messages' =>
 //                    [[
 //                        'type' => 'template',
@@ -98,6 +107,8 @@ if (sizeof($request_array['events']) > 0) {
 //                                'text' => 'ตอบแบบสอบถามเพื่อการพัฒนาที่ดียิ่งขึ้น',
 //                            ]
 //                    ]]
+
+
             ];
             $post_body = json_encode($data, JSON_UNESCAPED_UNICODE);
 
