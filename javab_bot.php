@@ -36,7 +36,7 @@ if ( sizeof($request_array['events']) > 0 )
                 }else
                 {
 //                    $reply_message = 'User ID: ' . $event['source']['userId'] . ' type: ' . $event['source']['type'];
-                    $reply_message = $event;
+                    $reply_message = $event . ' ';
                 }
 
             }
