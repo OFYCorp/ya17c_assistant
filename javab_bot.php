@@ -34,17 +34,15 @@ if ( sizeof($request_array['events']) > 0 )
                     $reply_message = json_encode($event) . ' ';
                 }
 
-            }else if( $event['message']['type'] == 'join' )
-            {
-                $reply_message = json_encode($event);
             }
             else
             {
-                $reply_message = 'สวัสดีครับ! ผมคือผู้ช่วยของเพื่อนสมาชิก ฝากเนื้อฝากตัวด้วยนะครับ ^^';
-
+                $reply_message = json_encode($event);
 
             }
-//                $reply_message = 'ระบบได้รับ '.ucfirst($event['message']['type']).' ของคุณแล้ว';
+
+        }else if( $event['type'] == 'join' ) {
+            $reply_message = 'สวัสดีครับ! ผมคือผู้ช่วยของเพื่อนสมาชิก ฝากเนื้อฝากตัวด้วยนะครับ ^^';
 
         }
         else
