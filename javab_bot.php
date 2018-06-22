@@ -51,32 +51,36 @@ if (sizeof($request_array['events']) > 0) {
             $reply_message = json_encode($event);
         }
 
-$reply_message = $request_profile_data;
+        $reply_message = $request_profile_data;
 
         if (strlen($reply_message) > 0) {
             //$reply_message = iconv("tis-620","utf-8",$reply_message);
             $data = [
                 'replyToken' => $reply_token,
 //                'messages' => [['type' => 'text', 'text' => $reply_message]]
-                'messages' => [[
-                    'type' => 'template',
-                    'altText' => 'this is a buttons template',
-                    'template' => [
-                        'type' => 'buttons',
-                        'actions' => [
-                            'type' => 'message',
-                            'label' => 'Action 1',
-                            'text' => 'Action 1',
-                        ],
+                'messages' =>
+                    [
                         [
-                            'type' => 'message',
-                            'label' => 'Action 2',
-                            'text' => 'Action 2',
-                        ],
-                        'thumbnailImageUrl' => 'http://www.yarisativ2017.club/img/yarisativ-logo.jpg',
-                        'title' => 'คุณรู้สึกอย่างไรกับคลับเรา',
-                        'text' => 'ตอบแบบสอบถามเพื่อการพัฒนาที่ดียิ่งขึ้น',
-                    ]]]
+                            'type' => 'template',
+                            'altText' => 'this is a buttons template',
+                            'template' => [
+                                'type' => 'buttons',
+                                'actions' => [
+                                    'type' => 'message',
+                                    'label' => 'Action 1',
+                                    'text' => 'Action 1',
+                                ],
+                                [
+                                    'type' => 'message',
+                                    'label' => 'Action 2',
+                                    'text' => 'Action 2',
+                                ],
+                                'thumbnailImageUrl' => 'http://www.yarisativ2017.club/img/yarisativ-logo.jpg',
+                                'title' => 'คุณรู้สึกอย่างไรกับคลับเรา',
+                                'text' => 'ตอบแบบสอบถามเพื่อการพัฒนาที่ดียิ่งขึ้น',
+                            ]
+                        ]
+                    ]
             ];
             $post_body = json_encode($data, JSON_UNESCAPED_UNICODE);
 
