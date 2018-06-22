@@ -57,8 +57,8 @@ if (sizeof($request_array['events']) > 0) {
             //$reply_message = iconv("tis-620","utf-8",$reply_message);
             $data = [
                 'replyToken' => $reply_token,
-//                'messages' => [['type' => 'text', 'text' => $reply_message]]
-                'messages' => [['type' => 'image', 'originalContentUrl' => 'http://www.yarisativ2017.club/img/yarisativ-logo.jpg', 'previewImageUrl' => 'http://www.yarisativ2017.club/img/yarisativ-logo.jpg', 'animated' => false]]
+                'messages' => [['type' => 'text', 'text' => $reply_message]]
+//                'messages' => [['type' => 'image', 'originalContentUrl' => 'http://www.yarisativ2017.club/img/yarisativ-logo.jpg', 'previewImageUrl' => 'http://www.yarisativ2017.club/img/yarisativ-logo.jpg', 'animated' => false]]
 //                'messages' =>
 //                    [
 //                        [
