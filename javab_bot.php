@@ -58,7 +58,11 @@ if (sizeof($request_array['events']) > 0) {
             $data = [
                 'replyToken' => $reply_token,
                 // Text
-                'messages' => [['type' => 'text', 'text' => $reply_message]]
+//                'messages' => [['type' => 'text', 'text' => $reply_message]]
+                'messages' => [
+                    ['type' => 'text', 'text' => $reply_message],
+                    ['type' => 'text', 'text' => 'ทดสอบ'],
+                ],
 
                 // Image
 //                'messages' => [[
@@ -113,8 +117,6 @@ if (sizeof($request_array['events']) > 0) {
             ];
             $post_body = json_encode($data, JSON_UNESCAPED_UNICODE);
 
-            $send_result = send_reply_message($API_REPLY_URL, $POST_HEADER, $post_body);
-            echo "Result: " . $send_result . "\r\n";
             $send_result = send_reply_message($API_REPLY_URL, $POST_HEADER, $post_body);
             echo "Result: " . $send_result . "\r\n";
         }
