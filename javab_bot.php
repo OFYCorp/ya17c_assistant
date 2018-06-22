@@ -2,10 +2,7 @@
 $ACCESS_TOKEN = 's6B8WTWNkSI3IhbUSYVoNsHsazHZsh68GURPWHlBwAwcEr9w7Av21XJ43q8B3JGccXFxUfmK+IsDwiYm+tumI+ZLw5rFK8+bJBG9+4h0BylzHoIpV3eHttznIttxn9XrCYxk5tJhnpBcYqY6Gt68dgdB04t89/1O/w1cDnyilFU='; // Access Token ค่าที่เราสร้างขึ้น
 $POST_HEADER = array('Content-Type: application/json', 'Authorization: Bearer ' . $ACCESS_TOKEN);
 
-$API_URL = 'https://api.line.me/v2/bot/message/reply';
-
-$request = file_get_contents('php://input');   // Get request content
-$request_profile_array = json_decode($request, true);   // Decode JSON to Array
+$API_REPLY_URL = 'https://api.line.me/v2/bot/message/reply';
 
 $request = file_get_contents('php://input');   // Get request content
 $request_array = json_decode($request, true);   // Decode JSON to Array
@@ -14,7 +11,7 @@ if (sizeof($request_array['events']) > 0) {
 
     foreach ($request_array['events'] as $event) {
         $API_PROFILE_URL = 'https://api.line.me/v2/bot/profile/' . $event['source']['userId'];
-        $request_data = request_profile($API_PROFILE_URL, $POST_HEADER);
+        $request_profile_data = request_profile($API_PROFILE_URL, $POST_HEADER);
 
         $reply_message = '';
         $reply_token = $event['replyToken'];
@@ -49,10 +46,13 @@ if (sizeof($request_array['events']) > 0) {
         } else if ($event['type'] == 'leave') {
             $reply_message = 'ขอบคุณที่ให้ผมได้พบกับทุกท่าน ลาก่อนครับ';
 
-        } else
+        } else {
 //            $reply_message = 'ระบบได้รับ Event '.ucfirst($event['type']).' ของคุณแล้ว';
             $reply_message = json_encode($event);
-$reply_message = $request_data;
+        }
+
+$reply_message = $request_profile_data;
+
         if (strlen($reply_message) > 0) {
             //$reply_message = iconv("tis-620","utf-8",$reply_message);
             $data = [
@@ -61,7 +61,7 @@ $reply_message = $request_data;
             ];
             $post_body = json_encode($data, JSON_UNESCAPED_UNICODE);
 
-            $send_result = send_reply_message($API_URL, $POST_HEADER, $post_body);
+            $send_result = send_reply_message($API_REPLY_URL, $POST_HEADER, $post_body);
             echo "Result: " . $send_result . "\r\n";
         }
     }
