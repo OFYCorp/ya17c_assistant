@@ -29,29 +29,28 @@ if (sizeof($request_array['events']) > 0) {
 
                 if ($text == 'สวัสดี') {
                     $reply_message = 'ต้องการสอบถามข้อมูลด้านไหนครับ..?';
-
+                }
                 if ($text == 'รถมีทั้งหมดกี่รุ่น') {
                     $reply_message = 'คุณต้องการถามถึงรถรุ่น Yaris หรือ Yaris ATIV?';
 
                 } else if ($text == 'Yaris') {
-                    $reply_message = 'มีทั้งหมด 4 รุ่น ดังนี้ <br>
-                                      - 2 J Eco CVT ราคา 489,000 บาท <br>
-                                      - 2 J CVT     ราคา 539,000 บาท <br>
-                                      - 2 E CVT     ราคา 569,000 บาท <br>
+                    $reply_message = 'มีทั้งหมด 4 รุ่น ดังนี้
+                                      - 2 J Eco CVT ราคา 489,000 บาท
+                                      - 2 J CVT     ราคา 539,000 บาท
+                                      - 2 E CVT     ราคา 569,000 บาท
                                       - 2 G CVT     ราคา 619,000 บาท';
-
 
                 } else if ($text == 'Yaris ATIV') {
                     $reply_message = 'มีทั้งหมด 5 รุ่น ดังนี้ xxxxxx';
 
-                } else {
+//                } else {
 //                    $reply_message = 'ขออภัยครับ ไม่พบเนื้อหาที่คุณต้องการ';
 //                    $reply_message = 'User ID: ' . $event['source']['userId'] . ' type: ' . $event['source']['type'];
 //                    $reply_message = json_encode($event) . ' ';
                 }
 
 
-            } else {
+//            } else {
 //                $reply_message = json_encode($event);
 
             }
@@ -62,7 +61,7 @@ if (sizeof($request_array['events']) > 0) {
         } else if ($event['type'] == 'leave') {
             $reply_message = 'ขอบคุณที่ให้ผมได้พบกับทุกท่าน ลาก่อนครับ';
 
-        } else {
+//        } else {
 //            $reply_message = 'ระบบได้รับ Event '.ucfirst($event['type']).' ของคุณแล้ว';
 //            $reply_message = json_encode($event);
         }
@@ -169,5 +168,4 @@ function request_profile($url, $post_header)
 
     return $result;
 }
-
 ?>
