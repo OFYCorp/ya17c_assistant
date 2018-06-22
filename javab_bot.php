@@ -2,6 +2,7 @@
 $ACCESS_TOKEN = 's6B8WTWNkSI3IhbUSYVoNsHsazHZsh68GURPWHlBwAwcEr9w7Av21XJ43q8B3JGccXFxUfmK+IsDwiYm+tumI+ZLw5rFK8+bJBG9+4h0BylzHoIpV3eHttznIttxn9XrCYxk5tJhnpBcYqY6Gt68dgdB04t89/1O/w1cDnyilFU='; // Access Token ค่าที่เราสร้างขึ้น
 $POST_HEADER = array('Content-Type: application/json', 'Authorization: Bearer ' . $ACCESS_TOKEN);
 
+// API URL for reply message to user.
 $API_REPLY_URL = 'https://api.line.me/v2/bot/message/reply';
 
 $request = file_get_contents('php://input');   // Get request content
@@ -10,9 +11,14 @@ $request_array = json_decode($request, true);   // Decode JSON to Array
 if (sizeof($request_array['events']) > 0) {
 
     foreach ($request_array['events'] as $event) {
+
+        // API URL for get user profile.
         $API_PROFILE_URL = 'https://api.line.me/v2/bot/profile/' . $event['source']['userId'];
+
+        // Get user profile data from LINE.
         $request_profile_data = request_profile($API_PROFILE_URL, $POST_HEADER);
 
+        // Reply message conditions
         $reply_message = '';
         $reply_token = $event['replyToken'];
 
