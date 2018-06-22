@@ -69,8 +69,8 @@ if (sizeof($request_array['events']) > 0) {
                 // Sticker
                 'messages' => [[
                     'type' => 'sticker',
-                    'packageId' => '1',
-                    'stickerId' => '2562']]
+                    'packageId' => '4',
+                    'stickerId' => '623']]
 
             // Template
 //                'messages' =>
