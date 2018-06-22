@@ -57,36 +57,47 @@ if (sizeof($request_array['events']) > 0) {
             //$reply_message = iconv("tis-620","utf-8",$reply_message);
             $data = [
                 'replyToken' => $reply_token,
+                // Text
 //                'messages' => [['type' => 'text', 'text' => $reply_message]]
+
+                // Image
 //                'messages' => [[
 //                    'type' => 'image',
 //                    'originalContentUrl' => 'https://i2.wp.com/beebom.com/wp-content/uploads/2016/01/Reverse-Image-Search-Engines-Apps-And-Its-Uses-2016.jpg?resize=640%2C426', 'previewImageUrl' => 'https://i2.wp.com/beebom.com/wp-content/uploads/2016/01/Reverse-Image-Search-Engines-Apps-And-Its-Uses-2016.jpg?resize=640%2C426',
 //                    'animated' => false]]
-                'messages' =>
-                    [[
-                            'type' => 'template',
-                            'altText' => 'this is a buttons template',
-                            'template' =>
-                                [
-                                    'type' => 'buttons',
-                                    'actions' =>
-                                        [
-                                            [
-                                                'type' => 'message',
-                                                'label' => 'Action 1',
-                                                'text' => 'Action 1',
-                                            ],
-                                            [
-                                                'type' => 'message',
-                                                'label' => 'Action 2',
-                                                'text' => 'Action 2',
-                                            ],
-                                        ],
-                                    'thumbnailImageUrl' => 'https://i2.wp.com/beebom.com/wp-content/uploads/2016/01/Reverse-Image-Search-Engines-Apps-And-Its-Uses-2016.jpg?resize=640%2C426',
-                                    'title' => 'คุณรู้สึกอย่างไรกับคลับเรา',
-                                    'text' => 'ตอบแบบสอบถามเพื่อการพัฒนาที่ดียิ่งขึ้น',
-                                ]
-                        ]]
+
+                // Sticker
+                'messages' => [[
+                    'type' => 'sticker',
+                    'packageId' => '1',
+                    'stickerId' => '2562']]
+
+            // Template
+//                'messages' =>
+//                    [[
+//                        'type' => 'template',
+//                        'altText' => 'this is a buttons template',
+//                        'template' =>
+//                            [
+//                                'type' => 'buttons',
+//                                'actions' =>
+//                                    [
+//                                        [
+//                                            'type' => 'message',
+//                                            'label' => 'Action 1',
+//                                            'text' => 'Action 1',
+//                                        ],
+//                                        [
+//                                            'type' => 'message',
+//                                            'label' => 'Action 2',
+//                                            'text' => 'Action 2',
+//                                        ],
+//                                    ],
+//                                'thumbnailImageUrl' => 'https://i2.wp.com/beebom.com/wp-content/uploads/2016/01/Reverse-Image-Search-Engines-Apps-And-Its-Uses-2016.jpg?resize=640%2C426',
+//                                'title' => 'คุณรู้สึกอย่างไรกับคลับเรา',
+//                                'text' => 'ตอบแบบสอบถามเพื่อการพัฒนาที่ดียิ่งขึ้น',
+//                            ]
+//                    ]]
             ];
             $post_body = json_encode($data, JSON_UNESCAPED_UNICODE);
 
