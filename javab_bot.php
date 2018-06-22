@@ -37,7 +37,12 @@ if (sizeof($request_array['events']) > 0) {
                     $reply_message = 'มีทั้งหมด 4 รุ่น ดังนี้                           - 2 J Eco CVT ราคา 489,000 บาท - 2 J CVT        ราคา 539,000 บาท   - 2 E CVT        ราคา 569,000 บาท   - 2 G CVT       ราคา 619,000 บาท';
 
                 } else if ($text == 'Yaris ATIV') {
-                    $reply_message = 'มีทั้งหมด 5 รุ่น ดังนี้ xxxxxx';
+                    $reply_message = 'มีทั้งหมด 5 รุ่น ดังนี้
+                                        - 1.2 J Eco CVT ราคา 479,000 บาท 
+                                        - 1.2 J CVT ราคา 529,000 บาท 
+                                        - 1.2 E CVT ราคา 559,000 บาท 
+                                        - 1.2 G CVT ราคา 609,000 บาท
+                                        - 1.2 S CVT ราคา 635,000 บาท';
 
 //                } else {
 //                    $reply_message = 'ขออภัยครับ ไม่พบเนื้อหาที่คุณต้องการ';
