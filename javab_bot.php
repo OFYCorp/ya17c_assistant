@@ -7,17 +7,14 @@ $POST_HEADER = array('Content-Type: application/json', 'Authorization: Bearer ' 
 $request = file_get_contents('php://input');   // Get request content
 $request_array = json_decode($request, true);   // Decode JSON to Array
 
-if ( sizeof($request_array['events']) > 0 )
-{
+if (sizeof($request_array['events']) > 0) {
 
-    foreach ($request_array['events'] as $event)
-    {
+    foreach ($request_array['events'] as $event) {
         $reply_message = '';
         $reply_token = $event['replyToken'];
 
-        if ( $event['type'] == 'message' )
-        {
-            if( $event['message']['type'] == 'text' ) {
+        if ($event['type'] == 'message') {
+            if ($event['message']['type'] == 'text') {
                 $text = $event['message']['text'];
 //                $reply_message = 'ระบบได้รับข้อความ ('.$text.') ของคุณแล้ว';
 
@@ -34,23 +31,23 @@ if ( sizeof($request_array['events']) > 0 )
                     $reply_message = json_encode($event) . ' ';
                 }
 
-            }
-            else
-            {
+
+            } else {
                 $reply_message = json_encode($event);
 
             }
 
-        }else if( $event['type'] == 'join' ) {
+        } else if ($event['type'] == 'join') {
             $reply_message = 'สวัสดีครับ! ผมคือผู้ช่วยของเพื่อนสมาชิก ฝากเนื้อฝากตัวด้วยนะครับ ^^';
 
-        }
-        else
+        } else if ($event['type'] == 'leave') {
+            $reply_message = 'ขอบคุณที่ให้ผมได้พบกับทุกท่าน ลาก่อนครับ';
+
+        } else
 //            $reply_message = 'ระบบได้รับ Event '.ucfirst($event['type']).' ของคุณแล้ว';
             $reply_message = json_encode($event);
 
-        if( strlen($reply_message) > 0 )
-        {
+        if (strlen($reply_message) > 0) {
             //$reply_message = iconv("tis-620","utf-8",$reply_message);
             $data = [
                 'replyToken' => $reply_token,
@@ -59,7 +56,7 @@ if ( sizeof($request_array['events']) > 0 )
             $post_body = json_encode($data, JSON_UNESCAPED_UNICODE);
 
             $send_result = send_reply_message($API_URL, $POST_HEADER, $post_body);
-            echo "Result: ".$send_result."\r\n";
+            echo "Result: " . $send_result . "\r\n";
         }
     }
 }
