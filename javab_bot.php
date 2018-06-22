@@ -58,11 +58,13 @@ if (sizeof($request_array['events']) > 0) {
             $data = [
                 'replyToken' => $reply_token,
                 // Text
-//                'messages' => [['type' => 'text', 'text' => $reply_message]]
-                'messages' => [
-                    ['type' => 'text', 'text' => $reply_message],
-                    ['type' => 'text', 'text' => 'ทดสอบ'],
-                ],
+                'messages' => [['type' => 'text', 'text' => $reply_message]]
+
+            // Multi-Text
+//                'messages' => [
+//                    ['type' => 'text', 'text' => $reply_message],
+//                    ['type' => 'text', 'text' => 'ทดสอบ'],
+//                ],
 
                 // Image
 //                'messages' => [[
