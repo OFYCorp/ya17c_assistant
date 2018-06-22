@@ -38,16 +38,10 @@ if ( sizeof($request_array['events']) > 0 )
                     $reply_message = 'User ID: ' . $event['source']['userId'] . ' type: ' . $event['source']['type'];
                 }
 
-//                if (strpos($text, 'เปิด') !== false)
-//                { 
-//                    $reply_message = 'turn-on'; 
-//                }
-
-
-
             }
-//            else
+            else
 //                $reply_message = 'ระบบได้รับ '.ucfirst($event['message']['type']).' ของคุณแล้ว';
+                $reply_message = $event;
 
         }
         else
