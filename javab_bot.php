@@ -41,8 +41,8 @@ if ( sizeof($request_array['events']) > 0 )
 
             }
             else
-//                $reply_message = 'ระบบได้รับ '.ucfirst($event['message']['type']).' ของคุณแล้ว';
-                $reply_message = json_encode($event);
+                $reply_message = 'ระบบได้รับ '.ucfirst($event['message']['type']).' ของคุณแล้ว';
+//                $reply_message = json_encode($event);
 
         }
         else
