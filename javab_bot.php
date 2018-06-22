@@ -38,12 +38,31 @@ if (sizeof($request_array['events']) > 0) {
 
                 } else if ($text == 'Yaris ATIV') {
                     $reply_message = 'มีทั้งหมด 5 รุ่น ดังนี้                           - 1.2 J Eco CVT ราคา 479,000 บาท - 1.2 J CVT ราคา 529,000 บาท - 1.2 E CVT ราคา 559,000 บาท - 1.2 G CVT ราคา 609,000 บาท- 1.2 S CVT ราคา 635,000 บาท';
-
+                }
+                if ($text == 'Yaris ATIV มีกี่สี') {
+                    $reply_message = 'มีทั้งหมด 7 สี ดังนี้
+                    - Dark Blue Mica Metallic
+                    - Grey Metallic
+                    - Silver Metallic
+                    - Quartz Brown Metallic
+                    - Super White
+                    - Attitude Black Mica
+                    - Red Mica Metallic';
+                }
+                if ($text == 'Yaris มีกี่สี') {
+                    $reply_message = 'มีทั้งหมด 7 สี ดังนี้
+                    - Citrus Mica Metallic
+                    - Orange Metallic
+                    - Red Mica Metallic
+                    - Super White II
+                    - Silver Metallic
+                    - Grey Metallic
+                    - Attitude Black Mica';
+                }
 //                } else {
 //                    $reply_message = 'ขออภัยครับ ไม่พบเนื้อหาที่คุณต้องการ';
 //                    $reply_message = 'User ID: ' . $event['source']['userId'] . ' type: ' . $event['source']['type'];
 //                    $reply_message = json_encode($event) . ' ';
-                }
 
 
 //            } else {
