@@ -49,6 +49,9 @@ if (sizeof($request_array['events']) > 0) {
                     - Grey Metallic
                     - Attitude Black Mica';
                 }
+                if ($text == 'เบอร์โทรฉุกเฉิน') {
+                    $reply_message = '(66) 0-2386-2000 ตลอด 24 ชั่วโมง (หรือ 1800-238444 โทรฟรีสำหรับต่างจังหวัด เฉพาะโทรศัพท์พื้นฐาน ตลอด 24 ชั่วโมง)';
+                }
 //                } else {
 //                    $reply_message = 'ขออภัยครับ ไม่พบเนื้อหาที่คุณต้องการ';
 //                    $reply_message = 'User ID: ' . $event['source']['userId'] . ' type: ' . $event['source']['type'];
