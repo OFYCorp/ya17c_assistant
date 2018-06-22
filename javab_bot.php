@@ -27,11 +27,19 @@ if (sizeof($request_array['events']) > 0) {
                 $text = $event['message']['text'];
 //                $reply_message = 'ระบบได้รับข้อความ ('.$text.') ของคุณแล้ว';
 
+                if ($text == 'สวัสดี') {
+                    $reply_message = 'ต้องการสอบถามข้อมูลด้านไหนครับ..?';
+
                 if ($text == 'รถมีทั้งหมดกี่รุ่น') {
                     $reply_message = 'คุณต้องการถามถึงรถรุ่น Yaris หรือ Yaris ATIV?';
 
                 } else if ($text == 'Yaris') {
-                    $reply_message = 'มีทั้งหมด 4 รุ่น ดังนี้ 1';
+                    $reply_message = 'มีทั้งหมด 4 รุ่น ดังนี้ <br>
+                                      - 2 J Eco CVT ราคา 489,000 บาท <br>
+                                      - 2 J CVT     ราคา 539,000 บาท <br>
+                                      - 2 E CVT     ราคา 569,000 บาท <br>
+                                      - 2 G CVT     ราคา 619,000 บาท';
+
 
                 } else if ($text == 'Yaris ATIV') {
                     $reply_message = 'มีทั้งหมด 5 รุ่น ดังนี้ xxxxxx';
