@@ -34,7 +34,7 @@ if ( sizeof($request_array['events']) > 0 )
                     $reply_message = json_encode($event) . ' ';
                 }
 
-            }else if( $event['type'] == 'join' )
+            }else if( $event['message']['type'] == 'join' )
             {
                 $reply_message = json_encode($event);
             }
