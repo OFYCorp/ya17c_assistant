@@ -150,8 +150,7 @@ if (sizeof($request_array['events']) > 0) {
                             ]
                     ]]
                 ];
-            } else if ($text == 'Yaris มีสีอะไรบ้าง?') {
-                $reply_message = "";
+            } else if ($text == 'Yaris มีกี่สี?') {
                 $data = [
                     'replyToken' => $reply_token,
                     // Text
