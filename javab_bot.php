@@ -27,14 +27,17 @@ if (sizeof($request_array['events']) > 0) {
                 $text = $event['message']['text'];
 //                $reply_message = 'ระบบได้รับข้อความ ('.$text.') ของคุณแล้ว';
 
-                if ($text == 'รถมีทั้งหมดกี่รุ่น') {
-                    $reply_message = 'คุณต้องการถามถึงรถรุ่น Yaris หรือ Yaris ATIV?';
+                if ($text == 'รถมีกี่รุ่น') {
+                    $reply_message = 'คุณหมายถึงรถรุ่น Yaris หรือ Yaris ATIV?';
 
                 } else if ($text == 'Yaris') {
-                    $reply_message = 'มีทั้งหมด 4 รุ่น ดังนี้ 1';
+                    $reply_message = 'มีทั้งหมด 4 รุ่น ดังนี้\n 1.2 J Eco CVT ราคา 479,000 บาท\n';
 
                 } else if ($text == 'Yaris ATIV') {
                     $reply_message = 'มีทั้งหมด 5 รุ่น ดังนี้ xxxxxx';
+
+                } else if ($text == 'สวัสดี') {
+                    $reply_message = 'ผู้ช่วย YA17C สวัสดีครับ! ต้องการปรึกษาด้านใดดีครับ';
 
                 } else {
 //                    $reply_message = 'ขออภัยครับ ไม่พบเนื้อหาที่คุณต้องการ';
