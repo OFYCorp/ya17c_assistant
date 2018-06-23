@@ -164,14 +164,14 @@ if (sizeof($request_array['events']) > 0) {
                                 "columns" =>
                                     [
                                         [
-                                            "thumbnailImageUrl" => "https://www.toyota.co.th/media/files_usage/product/large/7aee2366ff550c5eada98722c8d3e65027644abbad370cec4f54ea63b805c1f8.png",
-                                            "title" => "รุ่น 1.2 S CVT",
-                                            "text" => "ราคา 635,000 บาท",
+                                            "thumbnailImageUrl" => "https://www.toyota.co.th/media/product/color/general/5354ebf1c3c1d543dc01732ff8b52a17fb4fdea4457b117273b1d247cb29a212.png",
+                                            "title" => "Citrus Mica Metallic",
+                                            "text" => "เริ่มต้นที่ 489,000 บาท",
                                             "actions" => [
                                                 [
                                                     "type" => "message",
                                                     "label" => "รายละเอียด",
-                                                    "text" => "รายละเอียด ATIV 1.2 S CVT"
+                                                    "text" => "รายละเอียด Yaris"
                                                 ]
                                             ]
                                         ],
@@ -239,16 +239,7 @@ if (sizeof($request_array['events']) > 0) {
 //                                "columns" =>
 //                                    [
 //                                        [
-//                                            "thumbnailImageUrl" => "https://www.toyota.co.th/media/product/color/general/5354ebf1c3c1d543dc01732ff8b52a17fb4fdea4457b117273b1d247cb29a212.png",
-//                                            "title" => "Citrus Mica Metallic",
-//                                            "text" => "เริ่มต้นที่ 489,000 บาท",
-//                                            "actions" => [
-//                                                [
-//                                                    "type" => "message",
-//                                                    "label" => "รายละเอียด",
-//                                                    "text" => "รายละเอียด Yaris"
-//                                                ]
-//                                            ]
+//
 //                                        ],
 //                                        [
 //                                            "thumbnailImageUrl" => "https://www.toyota.co.th/media/product/color/general/3b009e16b88c60a71216e27c5d92fc80ed16f307d34b621034d4a72a84de8174.png",
