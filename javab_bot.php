@@ -174,18 +174,18 @@ if (sizeof($request_array['events']) > 0) {
                                                 ]
                                             ]
                                         ],
-                                        [
-                                            "thumbnailImageUrl" => "https://www.toyota.co.th/media/product/color/general/3b009e16b88c60a71216e27c5d92fc80ed16f307d34b621034d4a72a84de8174.png",
-                                            "title" => "Orange Metallic",
-                                            "text" => "เริ่มต้นที่ 489,000 บาท",
-                                            "actions" => [
-                                                [
-                                                    "type" => "message",
-                                                    "label" => "รายละเอียด",
-                                                    "text" => "รายละเอียด Yaris"
-                                                ]
-                                            ]
-                                        ],
+//                                        [
+//                                            "thumbnailImageUrl" => "https://www.toyota.co.th/media/product/color/general/3b009e16b88c60a71216e27c5d92fc80ed16f307d34b621034d4a72a84de8174.png",
+//                                            "title" => "Orange Metallic",
+//                                            "text" => "เริ่มต้นที่ 489,000 บาท",
+//                                            "actions" => [
+//                                                [
+//                                                    "type" => "message",
+//                                                    "label" => "รายละเอียด",
+//                                                    "text" => "รายละเอียด Yaris"
+//                                                ]
+//                                            ]
+//                                        ],
 //                                        [
 //                                            "thumbnailImageUrl" => "https://www.toyota.co.th/media/product/color/general/5627eb513af44cca6bc7c8fffb4967bb45745eaa0ec767dcfca77bfadc1721c2.png",
 //                                            "title" => "Red Mica Metallic",
