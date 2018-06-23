@@ -166,7 +166,7 @@ if (sizeof($request_array['events']) > 0) {
                                         [
                                             "thumbnailImageUrl" => "https://www.toyota.co.th/media/product/color/general/5354ebf1c3c1d543dc01732ff8b52a17fb4fdea4457b117273b1d247cb29a212.png",
                                             "title" => "Citrus Mica Metallic",
-//                                            "text" => " ",
+                                            "text" => "เริ่มต้นที่ 489,000 บาท",
                                             "actions" => [
                                                 [
                                                     "type" => "message",
@@ -176,9 +176,9 @@ if (sizeof($request_array['events']) > 0) {
                                             ]
                                         ],
                                         [
-                                            "thumbnailImageUrl" => "https://www.toyota.co.th/media/files_usage/product/large/34abf17927ce881b4c5a79a9bcff5d0bbf648345312c21bf0378bc5fcd2d0b63.png",
-                                            "title" => "รุ่น 1.2 G CVT",
-                                            "text" => " ",
+                                            "thumbnailImageUrl" => "https://www.toyota.co.th/media/product/color/general/3b009e16b88c60a71216e27c5d92fc80ed16f307d34b621034d4a72a84de8174.png",
+                                            "title" => "Orange Metallic",
+                                            "text" => "เริ่มต้นที่ 489,000 บาท",
                                             "actions" => [
                                                 [
                                                     "type" => "message",
@@ -188,9 +188,9 @@ if (sizeof($request_array['events']) > 0) {
                                             ]
                                         ],
                                         [
-                                            "thumbnailImageUrl" => "https://www.toyota.co.th/media/files_usage/product/large/9bbb65df329426be113b590c4a06c0df4adb8af43f4dd6d5a7fe87dd76bbb839.png",
-                                            "title" => "รุ่น 1.2 E CVT",
-                                            "text" => "ราคา 559,000 บาท",
+                                            "thumbnailImageUrl" => "https://www.toyota.co.th/media/product/color/general/5627eb513af44cca6bc7c8fffb4967bb45745eaa0ec767dcfca77bfadc1721c2.png",
+                                            "title" => "Red Mica Metallic",
+                                            "text" => "เริ่มต้นที่ 489,000 บาท",
                                             "actions" => [
                                                 [
                                                     "type" => "message",
@@ -200,9 +200,9 @@ if (sizeof($request_array['events']) > 0) {
                                             ]
                                         ],
                                         [
-                                            "thumbnailImageUrl" => "https://www.toyota.co.th/media/files_usage/product/large/cac95fd8be30c963ae0f113265fd5d36f09c74ef9d9029481c8951724c7a2502.png",
-                                            "title" => "รุ่น 1.2 J CVT",
-                                            "text" => "ราคา 529,000 บาท",
+                                            "thumbnailImageUrl" => "https://www.toyota.co.th/media/product/color/general/5d871bcc69f214bdf4ff0def9c929be508db91decf26091b596af1380961951f.png",
+                                            "title" => "Super White II",
+                                            "text" => "เริ่มต้นที่ 489,000 บาท",
                                             "actions" => [
                                                 [
                                                     "type" => "message",
@@ -212,9 +212,9 @@ if (sizeof($request_array['events']) > 0) {
                                             ]
                                         ],
                                         [
-                                            "thumbnailImageUrl" => "https://www.toyota.co.th/media/files_usage/product/large/46f12669788d6f5cd804bde6aba0833608f91bfb1d8b2443275d94962d1d309a.png",
-                                            "title" => "รุ่น 1.2 J Eco CVT",
-                                            "text" => "ราคา 479,000 บาท",
+                                            "thumbnailImageUrl" => "https://www.toyota.co.th/media/product/color/general/5daac19fdf226a8dc288e24beae1aebdaf3ff4a3e9e9ad7eb4ad3bf7aa4514a4.png",
+                                            "title" => "Silver Metallic",
+                                            "text" => "เริ่มต้นที่ 489,000 บาท",
                                             "actions" => [
                                                 [
                                                     "type" => "message",
@@ -222,7 +222,31 @@ if (sizeof($request_array['events']) > 0) {
                                                     "text" => "รายละเอียด Yaris"
                                                 ]
                                             ]
-                                        ]
+                                        ],
+                                        [
+                                            "thumbnailImageUrl" => "https://www.toyota.co.th/media/product/color/general/4f4a1741a4b78be3f87f629b77eb1a82fbe255a89e479ed732be58fa341fe1c7.png",
+                                            "title" => "Grey Metallic",
+                                            "text" => "เริ่มต้นที่ 489,000 บาท",
+                                            "actions" => [
+                                                [
+                                                    "type" => "message",
+                                                    "label" => "รายละเอียด",
+                                                    "text" => "รายละเอียด Yaris"
+                                                ]
+                                            ]
+                                        ],
+                                        [
+                                            "thumbnailImageUrl" => "https://www.toyota.co.th/media/product/color/general/55b1a1058b23dc06117386cc19e72718099af19bc0e05f7ab3be3f95ee4dbb80.png",
+                                            "title" => "Attitude Black Mica",
+                                            "text" => "เริ่มต้นที่ 489,000 บาท",
+                                            "actions" => [
+                                                [
+                                                    "type" => "message",
+                                                    "label" => "รายละเอียด",
+                                                    "text" => "รายละเอียด Yaris"
+                                                ]
+                                            ]
+                                        ],
                                     ]
                             ]
                     ]]
