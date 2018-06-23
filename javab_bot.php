@@ -25,11 +25,9 @@ if (sizeof($request_array['events']) > 0) {
                     $reply_message = 'คุณต้องการถามถึงรถรุ่น Yaris หรือ Yaris ATIV?';
                 } else if ($text == 'Yaris') {
                     $reply_message = 'มีทั้งหมด 4 รุ่น ดังนี้                           - 2 J Eco CVT ราคา 489,000 บาท - 2 J CVT        ราคา 539,000 บาท   - 2 E CVT        ราคา 569,000 บาท   - 2 G CVT       ราคา 619,000 บาท';
-                }
-                else if ($text == 'Yaris ATIV') {
+                } else if ($text == 'Yaris ATIV') {
                     $reply_message = 'มีทั้งหมด 5 รุ่น ดังนี้                           - 1.2 J Eco CVT ราคา 479,000 บาท - 1.2 J CVT ราคา 529,000 บาท - 1.2 E CVT ราคา 559,000 บาท - 1.2 G CVT ราคา 609,000 บาท- 1.2 S CVT ราคา 635,000 บาท';
-                }
-                if ($text == 'Yaris ATIV มีกี่สี') {
+                } else if ($text == 'Yaris ATIV มีกี่สี') {
                     $reply_message = 'มีทั้งหมด 7 สี ดังนี้
                     - Dark Blue Mica Metallic
                     - Grey Metallic
@@ -38,8 +36,7 @@ if (sizeof($request_array['events']) > 0) {
                     - Super White
                     - Attitude Black Mica
                     - Red Mica Metallic';
-                }
-                if ($text == 'Yaris มีกี่สี') {
+                } else if ($text == 'Yaris มีกี่สี') {
                     $reply_message = 'มีทั้งหมด 7 สี ดังนี้
                     - Citrus Mica Metallic
                     - Orange Metallic
@@ -48,8 +45,7 @@ if (sizeof($request_array['events']) > 0) {
                     - Silver Metallic
                     - Grey Metallic
                     - Attitude Black Mica';
-                }
-                if ($text == 'เบอร์โทรฉุกเฉิน') {
+                } else if ($text == 'เบอร์โทรฉุกเฉิน') {
                     $reply_message = '(66) 0-2386-2000 ตลอด 24 ชั่วโมง (หรือ 1800-238444 โทรฟรีสำหรับต่างจังหวัด เฉพาะโทรศัพท์พื้นฐาน ตลอด 24 ชั่วโมง)';
                 }
 //                } else {
@@ -60,20 +56,22 @@ if (sizeof($request_array['events']) > 0) {
 //                $reply_message = json_encode($event);
             }
         } else if ($event['type'] == 'join') {
-            $reply_message = 'สวัสดีครับ! ผมคือผู้ช่วยของเพื่อนสมาชิก ฝากเนื้อฝากตัวด้วยนะครับ ^^ ';
+            $reply_message = 'สวัสดีครับ! ผมคือผู้ช่วยของเพื่อนสมาชิก ฝากเนื้อฝากตัวด้วยนะครับ ^^';
         } else if ($event['type'] == 'leave') {
             $reply_message = 'ขอบคุณที่ให้ผมได้พบกับทุกท่าน ลาก่อนครับ';
 //        } else {
 //            $reply_message = 'ระบบได้รับ Event '.ucfirst($event['type']).' ของคุณแล้ว';
 //            $reply_message = json_encode($event);
         }
+
 //        $reply_message = $request_profile_data;
+
         if (strlen($reply_message) > 0) {
-            $reply_message = iconv("tis-620","utf-8",$reply_message);
+            $reply_message = iconv("tis-620", "utf-8", $reply_message);
             $data = [
                 'replyToken' => $reply_token,
                 // Text
-                'messages' => [['type' => 'text', 'text' => $reply_message]]
+                'messages' => [['type' => 'text', 'text' => $reply_message]],
 //                 Multi-Text
 //                'messages' => [
 //                    ['type' => 'text', 'text' => $reply_message],
@@ -127,80 +125,80 @@ if (sizeof($request_array['events']) > 0) {
 
 //              ออกแบบไว้แล้ว แต่แก้ไม่ไหวแล้ว ไล่ไม่ถูก ไม่รู้ติดตรงไหน
 
-                    'messages' =>
-                        [[
-                            "type" => "template",
-                            "altText" => "this is a carousel template",
-                            "template" =>
-                                [
-                                    "type" => "carousel",
-                                    "actions" => [],
-                                    "columns" =>
-                                        [
-                                            [
-                                    "thumbnailImageUrl" => "https://www.toyota.co.th/media/files_usage/product/large/7aee2366ff550c5eada98722c8d3e65027644abbad370cec4f54ea63b805c1f8.png",
-        "title" => "1.2 S CVT",
-        "text" => "ราคา 635,000 บาท",
-        "actions" => [
-          [
-              "type" => "message",
-            "label" => "รายละเอียด",
-            "text" => "Action 1"
-          ]
-        ]
-      ],
-      [
-          "thumbnailImageUrl" => "https://www.toyota.co.th/media/files_usage/product/large/34abf17927ce881b4c5a79a9bcff5d0bbf648345312c21bf0378bc5fcd2d0b63.png",
-        "title" => "1.2 G CVT",
-        "text" => "ราคา 609,000 บาท",
-        "actions" => [
-          [
-              "type" => "message",
-            "label" => "รายละเอียด",
-            "text" => "Action 1"
-          ]
-        ]
-      ],
-      [
-          "thumbnailImageUrl" => "https://www.toyota.co.th/media/files_usage/product/large/9bbb65df329426be113b590c4a06c0df4adb8af43f4dd6d5a7fe87dd76bbb839.png",
-        "title" => "1.2 E CVT",
-        "text" => "ราคา 559,000 บาท",
-        "actions" => [
-          [
-              "type" => "message",
-            "label" => "รายละเอียด",
-            "text" => "Action 1"
-          ]
-        ]
-      ],
-      [
-          "thumbnailImageUrl" => "https://www.toyota.co.th/media/files_usage/product/large/cac95fd8be30c963ae0f113265fd5d36f09c74ef9d9029481c8951724c7a2502.png",
-        "title" => "1.2 J CVT",
-        "text" => "ราคา 529,000 บาท",
-        "actions" => [
-          [
-              "type" => "message",
-            "label" => "รายละเอียด",
-            "text" => "Action 1"
-          ]
-        ]
-      ],
-      [
-          "thumbnailImageUrl" => "https://www.toyota.co.th/media/files_usage/product/large/46f12669788d6f5cd804bde6aba0833608f91bfb1d8b2443275d94962d1d309a.png",
-        "title" => "1.2 J Eco CVT",
-        "text" => "ราคา 479,000 บาท",
-        "actions" => [
-          [
-              "type" => "message",
-            "label" => "รายละเอียด",
-            "text" => "Action 1"
-          ]
-        ]
-      ]
-    ]
-  ]
-]
-            ]];
+//                    'messages' =>
+//                        [[
+//                            "type" => "template",
+//                            "altText" => "this is a carousel template",
+//                            "template" =>
+//                                [
+//                                    "type" => "carousel",
+//                                    "actions" => [],
+//                                    "columns" =>
+//                                        [
+//                                            [
+//                                                "thumbnailImageUrl" => "https://www.toyota.co.th/media/files_usage/product/large/7aee2366ff550c5eada98722c8d3e65027644abbad370cec4f54ea63b805c1f8.png",
+//                                                "title" => "1.2 S CVT",
+//                                                "text" => "ราคา 635,000 บาท",
+//                                                "actions" => [
+//                                                    [
+//                                                        "type" => "message",
+//                                                        "label" => "รายละเอียด",
+//                                                        "text" => "Action 1"
+//                                                    ]
+//                                                ]
+//                                            ],
+//                                            [
+//                                                "thumbnailImageUrl" => "https://www.toyota.co.th/media/files_usage/product/large/34abf17927ce881b4c5a79a9bcff5d0bbf648345312c21bf0378bc5fcd2d0b63.png",
+//                                                "title" => "1.2 G CVT",
+//                                                "text" => "ราคา 609,000 บาท",
+//                                                "actions" => [
+//                                                    [
+//                                                        "type" => "message",
+//                                                        "label" => "รายละเอียด",
+//                                                        "text" => "Action 1"
+//                                                    ]
+//                                                ]
+//                                            ],
+//                                            [
+//                                                "thumbnailImageUrl" => "https://www.toyota.co.th/media/files_usage/product/large/9bbb65df329426be113b590c4a06c0df4adb8af43f4dd6d5a7fe87dd76bbb839.png",
+//                                                "title" => "1.2 E CVT",
+//                                                "text" => "ราคา 559,000 บาท",
+//                                                "actions" => [
+//                                                    [
+//                                                        "type" => "message",
+//                                                        "label" => "รายละเอียด",
+//                                                        "text" => "Action 1"
+//                                                    ]
+//                                                ]
+//                                            ],
+//                                            [
+//                                                "thumbnailImageUrl" => "https://www.toyota.co.th/media/files_usage/product/large/cac95fd8be30c963ae0f113265fd5d36f09c74ef9d9029481c8951724c7a2502.png",
+//                                                "title" => "1.2 J CVT",
+//                                                "text" => "ราคา 529,000 บาท",
+//                                                "actions" => [
+//                                                    [
+//                                                        "type" => "message",
+//                                                        "label" => "รายละเอียด",
+//                                                        "text" => "Action 1"
+//                                                    ]
+//                                                ]
+//                                            ],
+//                                            [
+//                                                "thumbnailImageUrl" => "https://www.toyota.co.th/media/files_usage/product/large/46f12669788d6f5cd804bde6aba0833608f91bfb1d8b2443275d94962d1d309a.png",
+//                                                "title" => "1.2 J Eco CVT",
+//                                                "text" => "ราคา 479,000 บาท",
+//                                                "actions" => [
+//                                                    [
+//                                                        "type" => "message",
+//                                                        "label" => "รายละเอียด",
+//                                                        "text" => "Action 1"
+//                                                    ]
+//                                                ]
+//                                            ]
+//                                        ]
+//                                ]
+//                        ]]
+            ];
             $post_body = json_encode($data, JSON_UNESCAPED_UNICODE);
             $send_result = send_reply_message($API_REPLY_URL, $POST_HEADER, $post_body);
             echo "Result: " . $send_result . "\r\n";
@@ -220,6 +218,7 @@ function send_reply_message($url, $post_header, $post_body)
     curl_close($ch);
     return $result;
 }
+
 function request_profile($url, $post_header)
 {
     $ch = curl_init($url);
@@ -231,4 +230,5 @@ function request_profile($url, $post_header)
     curl_close($ch);
     return $result;
 }
+
 ?>
