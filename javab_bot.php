@@ -19,7 +19,7 @@ if (sizeof($request_array['events']) > 0) {
                 $text = $event['message']['text'];
 //                $reply_message = 'ระบบได้รับข้อความ ('.$text.') ของคุณแล้ว';
                 if ($text == 'สวัสดี') {
-                    $reply_message = 'ต้องการสอบถามข้อมูลด้านไหนครับ..?';
+                    $reply_message = 'ผู้ช่วยส่วนตัวของคุณพร้อมให้คำปรึกษาแล้วครับ!';
                 } else if ($text == 'รถมีทั้งหมดกี่รุ่น') {
                     $reply_message = 'คุณต้องการถามถึงรถรุ่น Yaris หรือ Yaris ATIV?';
                 } else if ($text == 'Yaris') {
