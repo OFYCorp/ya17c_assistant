@@ -199,18 +199,54 @@ if (sizeof($request_array['events']) > 0) {
                                                 ]
                                             ]
                                         ],
-//                                        [
-//
-//                                        ],
-//                                        [
-//
-//                                        ],
-//                                        [
-//
-//                                        ],
-//                                        [
-//
-//                                        ],
+                                        [
+                                            "thumbnailImageUrl" => "https://www.toyota.co.th/media/product/color/general/5d871bcc69f214bdf4ff0def9c929be508db91decf26091b596af1380961951f.png",
+                                            "title" => "Super White II",
+                                            "text" => "เริ่มต้นที่ 489,000 บาท",
+                                            "actions" => [
+                                                [
+                                                    "type" => "message",
+                                                    "label" => "รายละเอียด",
+                                                    "text" => "รายละเอียด Yaris"
+                                                ]
+                                            ]
+                                        ],
+                                        [
+                                            "thumbnailImageUrl" => "https://www.toyota.co.th/media/product/color/general/5daac19fdf226a8dc288e24beae1aebdaf3ff4a3e9e9ad7eb4ad3bf7aa4514a4.png",
+                                            "title" => "Silver Metallic",
+                                            "text" => "เริ่มต้นที่ 489,000 บาท",
+                                            "actions" => [
+                                                [
+                                                    "type" => "message",
+                                                    "label" => "รายละเอียด",
+                                                    "text" => "รายละเอียด Yaris"
+                                                ]
+                                            ]
+                                        ],
+                                        [
+                                            "thumbnailImageUrl" => "https://www.toyota.co.th/media/product/color/general/4f4a1741a4b78be3f87f629b77eb1a82fbe255a89e479ed732be58fa341fe1c7.png",
+                                            "title" => "Grey Metallic",
+                                            "text" => "เริ่มต้นที่ 489,000 บาท",
+                                            "actions" => [
+                                                [
+                                                    "type" => "message",
+                                                    "label" => "รายละเอียด",
+                                                    "text" => "รายละเอียด Yaris"
+                                                ]
+                                            ]
+                                        ],
+                                        [
+                                            "thumbnailImageUrl" => "https://www.toyota.co.th/media/product/color/general/55b1a1058b23dc06117386cc19e72718099af19bc0e05f7ab3be3f95ee4dbb80.png",
+                                            "title" => "Attitude Black Mica",
+                                            "text" => "เริ่มต้นที่ 489,000 บาท",
+                                            "actions" => [
+                                                [
+                                                    "type" => "message",
+                                                    "label" => "รายละเอียด",
+                                                    "text" => "รายละเอียด Yaris"
+                                                ]
+                                            ]
+                                        ],
                                     ]
                             ]
                     ]]
@@ -236,52 +272,15 @@ if (sizeof($request_array['events']) > 0) {
 //
 //                                        ],
 //                                        [
-//                                            "thumbnailImageUrl" => "https://www.toyota.co.th/media/product/color/general/5d871bcc69f214bdf4ff0def9c929be508db91decf26091b596af1380961951f.png",
-//                                            "title" => "Super White II",
-//                                            "text" => "เริ่มต้นที่ 489,000 บาท",
-//                                            "actions" => [
-//                                                [
-//                                                    "type" => "message",
-//                                                    "label" => "รายละเอียด",
-//                                                    "text" => "รายละเอียด Yaris"
-//                                                ]
-//                                            ]
+//
 //                                        ],
 //                                        [
-//                                            "thumbnailImageUrl" => "https://www.toyota.co.th/media/product/color/general/5daac19fdf226a8dc288e24beae1aebdaf3ff4a3e9e9ad7eb4ad3bf7aa4514a4.png",
-//                                            "title" => "Silver Metallic",
-//                                            "text" => "เริ่มต้นที่ 489,000 บาท",
-//                                            "actions" => [
-//                                                [
-//                                                    "type" => "message",
-//                                                    "label" => "รายละเอียด",
-//                                                    "text" => "รายละเอียด Yaris"
-//                                                ]
-//                                            ]
+//
 //                                        ],
 //                                        [
-//                                            "thumbnailImageUrl" => "https://www.toyota.co.th/media/product/color/general/4f4a1741a4b78be3f87f629b77eb1a82fbe255a89e479ed732be58fa341fe1c7.png",
-//                                            "title" => "Grey Metallic",
-//                                            "text" => "เริ่มต้นที่ 489,000 บาท",
-//                                            "actions" => [
-//                                                [
-//                                                    "type" => "message",
-//                                                    "label" => "รายละเอียด",
-//                                                    "text" => "รายละเอียด Yaris"
-//                                                ]
-//                                            ]
+//
 //                                        ],
-//                                        [
-//                                            "thumbnailImageUrl" => "https://www.toyota.co.th/media/product/color/general/55b1a1058b23dc06117386cc19e72718099af19bc0e05f7ab3be3f95ee4dbb80.png",
-//                                            "title" => "Attitude Black Mica",
-//                                            "text" => "เริ่มต้นที่ 489,000 บาท",
-//                                            "actions" => [
-//                                                [
-//                                                    "type" => "message",
-//                                                    "label" => "รายละเอียด",
-//                                                    "text" => "รายละเอียด Yaris"
-//                                                ]
-//                                            ]
+//
 //                                        ],
 //                                    ]
 //                            ]
