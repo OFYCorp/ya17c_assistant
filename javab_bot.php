@@ -166,7 +166,7 @@ if (sizeof($request_array['events']) > 0) {
                                         [
                                             "thumbnailImageUrl" => "https://www.toyota.co.th/media/product/color/general/5354ebf1c3c1d543dc01732ff8b52a17fb4fdea4457b117273b1d247cb29a212.png",
                                             "title" => "Citrus Mica Metallic",
-                                            "text" => " ",
+//                                            "text" => " ",
                                             "actions" => [
                                                 [
                                                     "type" => "message",
