@@ -94,7 +94,7 @@ if (sizeof($request_array['events']) > 0) {
                                                 [
                                                     "type" => "message",
                                                     "label" => "รายละเอียด",
-                                                    "text" => "Action 1"
+                                                    "text" => "รายละเอียด ATIV 1.2 S CVT"
                                                 ]
                                             ]
                                         ],
@@ -106,7 +106,7 @@ if (sizeof($request_array['events']) > 0) {
                                                 [
                                                     "type" => "message",
                                                     "label" => "รายละเอียด",
-                                                    "text" => "Action 1"
+                                                    "text" => "รายละเอียด ATIV 1.2 G CVT"
                                                 ]
                                             ]
                                         ],
@@ -118,7 +118,7 @@ if (sizeof($request_array['events']) > 0) {
                                                 [
                                                     "type" => "message",
                                                     "label" => "รายละเอียด",
-                                                    "text" => "Action 1"
+                                                    "text" => "รายละเอียด ATIV 1.2 E CVT"
                                                 ]
                                             ]
                                         ],
@@ -130,7 +130,7 @@ if (sizeof($request_array['events']) > 0) {
                                                 [
                                                     "type" => "message",
                                                     "label" => "รายละเอียด",
-                                                    "text" => "Action 1"
+                                                    "text" => "รายละเอียด ATIV 1.2 J CVT"
                                                 ]
                                             ]
                                         ],
@@ -142,7 +142,7 @@ if (sizeof($request_array['events']) > 0) {
                                                 [
                                                     "type" => "message",
                                                     "label" => "รายละเอียด",
-                                                    "text" => "Action 1"
+                                                    "text" => "รายละเอียด ATIV 1.2 J Eco CVT"
                                                 ]
                                             ]
                                         ]
