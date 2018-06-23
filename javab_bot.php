@@ -35,7 +35,7 @@ if (sizeof($request_array['events']) > 0) {
                     - Super White
                     - Attitude Black Mica
                     - Red Mica Metallic';
-                } else if ($text == 'Yaris มีกี่สี') {
+                } else if ($text == 'Yaris มีกี่สี?') {
                     $reply_message = 'มีทั้งหมด 7 สี ดังนี้
                     - Citrus Mica Metallic
                     - Orange Metallic
@@ -150,42 +150,42 @@ if (sizeof($request_array['events']) > 0) {
                             ]
                     ]]
                 ];
-//            } else if ($text == 'Yaris มีกี่สี') {
-//                $data = [
-//                    'replyToken' => $reply_token,
-//                    'messages' => [[
-//                        "type" => "template",
-//                        "altText" => "รายการสีของรถยนต์ Yaris",
-//                        "template" =>
-//                            [
-//                                "type" => "carousel",
-//                                "actions" => [],
-//                                "columns" =>
-//                                    [
-//                                        [
-//                                            "thumbnailImageUrl" => "https://www.toyota.co.th/media/product/color/general/5354ebf1c3c1d543dc01732ff8b52a17fb4fdea4457b117273b1d247cb29a212.png",
-//                                            "title" => "Citrus Mica Metallic",
-//                                            "text" => "เริ่มต้นที่ 489,000 บาท",
-//                                            "actions" => [
-//                                                [
-//                                                    "type" => "message",
-//                                                    "label" => "รายละเอียด",
-//                                                    "text" => "รายละเอียด Yaris"
-//                                                ]
-//                                            ]
-//                                        ],
-//                                        [
-//                                            "thumbnailImageUrl" => "https://www.toyota.co.th/media/product/color/general/3b009e16b88c60a71216e27c5d92fc80ed16f307d34b621034d4a72a84de8174.png",
-//                                            "title" => "Orange Metallic",
-//                                            "text" => "เริ่มต้นที่ 489,000 บาท",
-//                                            "actions" => [
-//                                                [
-//                                                    "type" => "message",
-//                                                    "label" => "รายละเอียด",
-//                                                    "text" => "รายละเอียด Yaris"
-//                                                ]
-//                                            ]
-//                                        ],
+            } else if ($text == 'Yaris มีกี่สี') {
+                $data = [
+                    'replyToken' => $reply_token,
+                    'messages' => [[
+                        "type" => "template",
+                        "altText" => "รายการสีของรถยนต์ Yaris",
+                        "template" =>
+                            [
+                                "type" => "carousel",
+                                "actions" => [],
+                                "columns" =>
+                                    [
+                                        [
+                                            "thumbnailImageUrl" => "https://www.toyota.co.th/media/product/color/general/5354ebf1c3c1d543dc01732ff8b52a17fb4fdea4457b117273b1d247cb29a212.png",
+                                            "title" => "Citrus Mica Metallic",
+                                            "text" => "เริ่มต้นที่ 489,000 บาท",
+                                            "actions" => [
+                                                [
+                                                    "type" => "message",
+                                                    "label" => "รายละเอียด",
+                                                    "text" => "รายละเอียด Yaris"
+                                                ]
+                                            ]
+                                        ],
+                                        [
+                                            "thumbnailImageUrl" => "https://www.toyota.co.th/media/product/color/general/3b009e16b88c60a71216e27c5d92fc80ed16f307d34b621034d4a72a84de8174.png",
+                                            "title" => "Orange Metallic",
+                                            "text" => "เริ่มต้นที่ 489,000 บาท",
+                                            "actions" => [
+                                                [
+                                                    "type" => "message",
+                                                    "label" => "รายละเอียด",
+                                                    "text" => "รายละเอียด Yaris"
+                                                ]
+                                            ]
+                                        ],
 //                                        [
 //                                            "thumbnailImageUrl" => "https://www.toyota.co.th/media/product/color/general/5627eb513af44cca6bc7c8fffb4967bb45745eaa0ec767dcfca77bfadc1721c2.png",
 //                                            "title" => "Red Mica Metallic",
@@ -246,10 +246,10 @@ if (sizeof($request_array['events']) > 0) {
 //                                                ]
 //                                            ]
 //                                        ],
-//                                    ]
-//                            ]
-//                    ]]
-//                ];
+                                    ]
+                            ]
+                    ]]
+                ];
             }
 //                 Multi-Text
 //                'messages' => [
