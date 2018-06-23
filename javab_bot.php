@@ -44,7 +44,7 @@ if (sizeof($request_array['events']) > 0) {
                     - Silver Metallic
                     - Grey Metallic
                     - Attitude Black Mica';
-                } else if ($text == 'เบอร์โทรฉุกเฉิน') {
+                } else if ($text == 'ฉุกเฉิน') {
                     $reply_message = '(66) 0-2386-2000 ตลอด 24 ชั่วโมง (หรือ 1800-238444 โทรฟรีสำหรับต่างจังหวัด เฉพาะโทรศัพท์พื้นฐาน ตลอด 24 ชั่วโมง) ';
                 }
 //                } else {
@@ -143,6 +143,83 @@ if (sizeof($request_array['events']) > 0) {
                                                     "type" => "message",
                                                     "label" => "รายละเอียด",
                                                     "text" => "รายละเอียด ATIV 1.2 J Eco CVT"
+                                                ]
+                                            ]
+                                        ]
+                                    ]
+                            ]
+                    ]]
+                ];
+            } else if ($text == 'Yaris มีกี่สี') {
+                $data = [
+                    'replyToken' => $reply_token,
+                    // Text
+                    'messages' => [[
+                        "type" => "template",
+                        "altText" => "รายการสีของรถยนต์ Yaris",
+                        "template" =>
+                            [
+                                "type" => "carousel",
+                                "actions" => [],
+                                "columns" =>
+                                    [
+                                        [
+                                            "thumbnailImageUrl" => "https://www.toyota.co.th/media/product/color/general/5354ebf1c3c1d543dc01732ff8b52a17fb4fdea4457b117273b1d247cb29a212.png",
+                                            "title" => "Citrus Mica Metallic",
+                                            "text" => " ",
+                                            "actions" => [
+                                                [
+                                                    "type" => "message",
+                                                    "label" => "รายละเอียด",
+                                                    "text" => "รายละเอียด Yaris"
+                                                ]
+                                            ]
+                                        ],
+                                        [
+                                            "thumbnailImageUrl" => "https://www.toyota.co.th/media/files_usage/product/large/34abf17927ce881b4c5a79a9bcff5d0bbf648345312c21bf0378bc5fcd2d0b63.png",
+                                            "title" => "รุ่น 1.2 G CVT",
+                                            "text" => " ",
+                                            "actions" => [
+                                                [
+                                                    "type" => "message",
+                                                    "label" => "รายละเอียด",
+                                                    "text" => "รายละเอียด Yaris"
+                                                ]
+                                            ]
+                                        ],
+                                        [
+                                            "thumbnailImageUrl" => "https://www.toyota.co.th/media/files_usage/product/large/9bbb65df329426be113b590c4a06c0df4adb8af43f4dd6d5a7fe87dd76bbb839.png",
+                                            "title" => "รุ่น 1.2 E CVT",
+                                            "text" => "ราคา 559,000 บาท",
+                                            "actions" => [
+                                                [
+                                                    "type" => "message",
+                                                    "label" => "รายละเอียด",
+                                                    "text" => "รายละเอียด Yaris"
+                                                ]
+                                            ]
+                                        ],
+                                        [
+                                            "thumbnailImageUrl" => "https://www.toyota.co.th/media/files_usage/product/large/cac95fd8be30c963ae0f113265fd5d36f09c74ef9d9029481c8951724c7a2502.png",
+                                            "title" => "รุ่น 1.2 J CVT",
+                                            "text" => "ราคา 529,000 บาท",
+                                            "actions" => [
+                                                [
+                                                    "type" => "message",
+                                                    "label" => "รายละเอียด",
+                                                    "text" => "รายละเอียด Yaris"
+                                                ]
+                                            ]
+                                        ],
+                                        [
+                                            "thumbnailImageUrl" => "https://www.toyota.co.th/media/files_usage/product/large/46f12669788d6f5cd804bde6aba0833608f91bfb1d8b2443275d94962d1d309a.png",
+                                            "title" => "รุ่น 1.2 J Eco CVT",
+                                            "text" => "ราคา 479,000 บาท",
+                                            "actions" => [
+                                                [
+                                                    "type" => "message",
+                                                    "label" => "รายละเอียด",
+                                                    "text" => "รายละเอียด Yaris"
                                                 ]
                                             ]
                                         ]
